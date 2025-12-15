@@ -36,7 +36,9 @@ Personalization and progress tracking are handled locally, keeping the experienc
 
 Watch a short demo of FairyTell in action:
 
+## Demo
 
+https://github.com/MohamedKaid/FairyTell/assets/XXXXXXXX/XXXXXXXX
 
 ---
 
