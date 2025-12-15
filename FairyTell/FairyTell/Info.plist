@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>signpainter_housescript.otf</string>
+		<string>FairyTale-Regular.ttf</string>
+		<string>Fairytale.otf</string>
+		<string>FairyDustB.ttf</string>
+		<string>BlackHouse Script.otf</string>
+		<string>FairyMother.otf</string>
+	</array>
+</dict>
+</plist>
