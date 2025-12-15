@@ -34,7 +34,7 @@ Personalization and progress tracking are handled locally, keeping the experienc
 
 ## ScreenShots
 
-<img width="590" height="1278" alt="IMG_0610" src="https://github.com/user-attachments/assets/82768c3c-a793-48ad-b43b-42a49ea37af9" />
+<img width="300" height="700" alt="IMG_0610" src="https://github.com/user-attachments/assets/82768c3c-a793-48ad-b43b-42a49ea37af9" />
 
 
 
