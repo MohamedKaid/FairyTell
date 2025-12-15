@@ -8,8 +8,8 @@ FairyTell is an iOS app that helps users overcome creative blocks by generating 
 ## Role
 
 - Team Lead  
-- Lead iOS Developer
-- Product Designer
+- Lead iOS Developer  
+- Product Designer  
 
 ---
 
@@ -32,20 +32,36 @@ Personalization and progress tracking are handled locally, keeping the experienc
 
 ---
 
+## Demo
+
+Watch a short demo of FairyTell in action:
+
+
+
+---
+
 ## Tools / Skills
 
+### Development
 - SwiftUI  
 - Apple Foundation Models  
 - Async / Await  
 - AppStorage (UserDefaults)  
+
+### AI & Logic
 - AI prompt design  
 - iOS state management  
+
+### Design & Planning
+- Sketch  
+- Miro  
+- Keynote  
 
 ---
 
 ## Timeline
 
-- 11/10/2025 - 12/11/2025
+- 11/10/2025 – 12/11/2025  
 
 ---
 
@@ -54,4 +70,3 @@ Personalization and progress tracking are handled locally, keeping the experienc
 - Mohamed Kaid  
 - Alexus Williams  
 - Richard Snider  
-
