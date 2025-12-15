@@ -1,87 +1,57 @@
 # FairyTell  
 AI-powered creativity guidance built with SwiftUI and Apple’s Foundation Models
 
-FairyTell is an iOS app that helps users break through creative blocks by generating personalized, real-world creativity tasks and guiding them through progress in a focused, motivating way.
+FairyTell is an iOS app that helps users overcome creative blocks by generating personalized, real-world creativity tasks and providing guided progress in a clean, focused experience.
 
 ---
 
-## What FairyTell Does
+## Role
 
-### AI-Generated Creativity Tasks
-- Built using Apple’s Foundation Models framework
-- Generates five unique micro-activities per session
-- Tasks are personalized based on the user’s creativity profile
-- Each task includes:
-  - A clear creative goal
-  - An explanation of why the task helps
-  - An estimated completion time
-  - A mood indicator
-
-Tasks are generated individually to ensure variety and reduce repetition.
+- Team Lead  
+- Lead iOS Developer
+- Product Designer
 
 ---
 
-### Personalization
-- User preferences are stored locally using `@AppStorage`
-- AI prompts adapt to the user’s creative profile
-- A reset option allows users to retrain their creative preferences without reinstalling the app
+## Project Overview
+
+FairyTell uses Apple’s Foundation Models framework to generate small, actionable creativity tasks tailored to each user’s preferences. Tasks are generated individually to ensure variety and reduce repetition. The app also includes a free-form chat mode that allows users to ask for creative guidance or inspiration at any time.
+
+Personalization and progress tracking are handled locally, keeping the experience lightweight and responsive.
 
 ---
 
-### Progress Tracking
-- Interactive task checklist
-- Animated completion states
-- Multiple progress visualization styles that can be switched at runtime:
-  - Block
-  - Capsule
-  - Circle
-  - Gradient
-  - Segmented
-  - Star
+## Key Features
 
-Progress updates dynamically as tasks are completed.
+- AI-generated creativity tasks using Apple Foundation Models  
+- Personalized task generation based on user preferences  
+- Interactive checklist with real-time progress tracking  
+- Multiple progress visualization styles selectable at runtime  
+- Free-form “Ask the Fairy” AI chat mode  
+- Clean SwiftUI-based user interface with async state handling  
 
 ---
 
-### Ask the Fairy Mode
-- Free-form AI interaction for creative guidance
-- Supports open-ended prompts and follow-up questions
-- Asynchronous AI responses with loading feedback
+## Tools / Skills
+
+- SwiftUI  
+- Apple Foundation Models  
+- Async / Await  
+- AppStorage (UserDefaults)  
+- AI prompt design  
+- iOS state management  
 
 ---
 
-### User Experience
-- Built entirely with SwiftUI and NavigationStack
-- Clean, lightweight interface
-- Loading overlays during AI generation
-- Safe async state management
+## Timeline
+
+MVP developed over multiple iterative development cycles.
 
 ---
 
-## Tech Stack
+## Authors
 
-- SwiftUI
-- Apple Foundation Models
-- Generable AI models
-- Async / Await
-- AppStorage (UserDefaults)
-
-
----
-
-## Future Improvements
-
-- Task history and streak tracking
-- Rich task presentation with additional context
-- Sharing completed creative sessions
-- Adaptive task difficulty based on engagement
-
----
-
-## Author
-
-- Mohamed Kaid 
-- Alexus Williams
-- Richard Snider
----
+- Mohamed Kaid  
+- Alexus Williams  
+- Richard Snider  
 
