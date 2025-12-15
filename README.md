@@ -45,7 +45,7 @@ Personalization and progress tracking are handled locally, keeping the experienc
 
 ## Timeline
 
-MVP developed over multiple iterative development cycles.
+- 11/10/2025 - 12/11/2025
 
 ---
 
