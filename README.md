@@ -66,15 +66,6 @@ Progress updates dynamically as tasks are completed.
 - Async / Await
 - AppStorage (UserDefaults)
 
----
-
-## Getting Started
-
-1. Clone the repository  
-2. Open the project in Xcode  
-3. Run on a supported device  
-
-iOS 17+ and Xcode 15+ recommended.
 
 ---
 
@@ -90,9 +81,7 @@ iOS 17+ and Xcode 15+ recommended.
 ## Author
 
 Mohamed Kaid
-
+Alexus Williams
+Richard Snider
 ---
 
-## License
-
-MIT License
