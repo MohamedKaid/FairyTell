@@ -34,9 +34,14 @@ Personalization and progress tracking are handled locally, keeping the experienc
 
 ## ScreenShots
 
+<H4> OnBoarding</H4>
+<img width="300" height="700" alt="IMG_0609" src="https://github.com/user-attachments/assets/ed9fd1dc-7051-4f7e-8b25-040b9c40a21e" />
+<H4> Generated Activity List</H44>
 <img width="300" height="700" alt="IMG_0610" src="https://github.com/user-attachments/assets/82768c3c-a793-48ad-b43b-42a49ea37af9" />
-
+<img width="300" height="700" alt="Screenshot 2025-12-15 at 10 19 10 AM" src="https://github.com/user-attachments/assets/10dfba2e-e9a6-4247-95a0-5b12c90cd35d" />
+<H4> Chat Bot</H4>
 <img width="300" height="700" alt="IMG_0611" src="https://github.com/user-attachments/assets/9908b335-1ea1-4479-96b3-d10ad0e249cb" />
+<img width="300" height="700" alt="Screenshot 2025-12-15 at 10 20 12 AM" src="https://github.com/user-attachments/assets/2085ab87-aad9-4f30-8537-d06be8669c5f" />
 
 
 ---
