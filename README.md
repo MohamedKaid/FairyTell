@@ -36,6 +36,7 @@ Personalization and progress tracking are handled locally, keeping the experienc
 
 <img width="300" height="700" alt="IMG_0610" src="https://github.com/user-attachments/assets/82768c3c-a793-48ad-b43b-42a49ea37af9" />
 
+<img width="300" height="700" alt="IMG_0611" src="https://github.com/user-attachments/assets/9908b335-1ea1-4479-96b3-d10ad0e249cb" />
 
 
 ---
