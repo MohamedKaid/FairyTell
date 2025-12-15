@@ -32,11 +32,10 @@ Personalization and progress tracking are handled locally, keeping the experienc
 
 ---
 
-## Demo
+## ScreenShots
 
-Watch a short demo of FairyTell in action:
+<img width="590" height="1278" alt="IMG_0610" src="https://github.com/user-attachments/assets/82768c3c-a793-48ad-b43b-42a49ea37af9" />
 
-[Watch the demo video](https://github.com/MohamedKaid/FairyTell/blob/main/demo/FairyTel1.mov)
 
 
 ---
