@@ -80,8 +80,8 @@ Progress updates dynamically as tasks are completed.
 
 ## Author
 
-Mohamed Kaid
-Alexus Williams
-Richard Snider
+- Mohamed Kaid 
+- Alexus Williams
+- Richard Snider
 ---
 
