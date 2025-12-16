@@ -41,7 +41,7 @@ Personalization and progress tracking are handled locally, keeping the experienc
 <img width="230" height="600" alt="Screenshot 2025-12-15 at 10 19 10 AM" src="https://github.com/user-attachments/assets/10dfba2e-e9a6-4247-95a0-5b12c90cd35d" />
 <H4> Chat Bot</H4>
 <img width="230" height="600" alt="IMG_0611" src="https://github.com/user-attachments/assets/9908b335-1ea1-4479-96b3-d10ad0e249cb" />
-<img width="230" height="600" alt="Screenshot 2025-12-15 at 10 20 12 AM" src="https://github.com/user-attachments/assets/2085ab87-aad9-4f30-8537-d06be8669c5f" />
+<img width="230" height="600" alt="Screenshot 2025-12-16 at 8 37 02 AM" src="https://github.com/user-attachments/assets/e1a15a26-fe03-4e37-9246-510ddf35e4f7" />
 
 
 ---
