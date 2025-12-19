@@ -2,7 +2,11 @@
 //  GenerateView.swift
 //  FairyTell
 //
-//  Created by Mohamed Kaid on 12/3/25.
+//  FIX: Stable navigation (no hidden conditional NavigationLink)
+//  - We removed the `NavigationLink(isActive:)` that only exists when tasks != empty.
+//  - We use `.navigationDestination(isPresented:)` which is always attached to the stack.
+//  - We only navigate AFTER tasks are generated successfully.
+//  - We separated loading-popover state from `isLoading` to avoid UI side-effects.
 //
 
 import SwiftUI
@@ -10,12 +14,18 @@ import FoundationModels
 
 struct ContentView: View {
 
-    @State private var tap: Bool = false
+    //Navigation
+    @State private var showTasksScreen: Bool = false
+
+    //Data
     @State private var taskList: [Modle] = []
     @State private var tasks: [String] = []
-    @State private var isLoading: Bool = false
 
-    // ✅ Only ONE userPrompt key
+    //Loading
+    @State private var isLoading: Bool = false
+    @State private var showLoadingPopover: Bool = false
+
+    
     @AppStorage("userPrompt") private var userPrompt: String = ""
 
     @AppStorage("hasSeenOnboarding") private var hasSeenOnboarding: Bool = false
@@ -25,9 +35,8 @@ struct ContentView: View {
     @State private var showResetAlert: Bool = false
     @State private var modelSession = LanguageModelSession()
 
-
     let currentTopic: String = "Creativity"
-    
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -46,20 +55,23 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .foregroundStyle(.white)
 
-                    HStack {
-                        Button {
-                            Task {
-                                modelSession = LanguageModelSession()
-                                await generate5Tasks()
-                                tap = true
+                    //Generate Button
+                    Button {
+                        Task {
+                            beginLoadingUI()
+                            await generate5Tasks()
+                            endLoadingUI()
+                            if !tasks.isEmpty {
+                                showTasksScreen = true
                             }
-                        } label: {
-                            Card(assetName: "Fairy3", cardName: "Lets Create")
                         }
-                        .foregroundStyle(.white)
-                        .disabled(modelSession.isResponding || isLoading)
+                    } label: {
+                        Card(assetName: "Fairy3", cardName: "Lets Create")
                     }
+                    .foregroundStyle(.white)
+                    .disabled(modelSession.isResponding || isLoading)
 
+                    //Status Text
                     if isLoading {
                         ProgressView("Generating your creative tasks...")
                             .foregroundStyle(.white)
@@ -67,18 +79,12 @@ struct ContentView: View {
                     } else if tasks.isEmpty {
                         Text("Tap \"The Fairy\" to get your creativity back!")
                             .foregroundStyle(.white)
-                    } else {
-                        NavigationLink(
-                            destination: CreativeAdvenView(tasks: tasks),
-                            isActive: $tap
-                        ) {
-                            EmptyView()
-                        }
-                        .hidden()
+                            .padding(.top, 12)
                     }
 
                     Spacer()
 
+                    //Reset
                     Button("Reset Fairy Personality") {
                         resetAppData()
                         showResetAlert = true
@@ -93,27 +99,45 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .popover(isPresented: $isLoading) {
+            .navigationDestination(isPresented: $showTasksScreen) {
+                CreativeAdvenView(tasks: tasks)
+            }
+            //popover is controlled
+            .popover(isPresented: $showLoadingPopover) {
                 loadingView(animationName: "AngryWizardWalking")
             }
         }
     }
 
+    //Loading UI helpers (NEW)
+    private func beginLoadingUI() {
+        isLoading = true
+        showLoadingPopover = true
+        showTasksScreen = false
+    }
+
+    private func endLoadingUI() {
+        isLoading = false
+        showLoadingPopover = false
+    }
+
+    //Reset
     private func resetAppData() {
         if let bundleID = Bundle.main.bundleIdentifier {
             UserDefaults.standard.removePersistentDomain(forName: bundleID)
         }
 
-        // Re-assert the important ones (optional but fine)
         hasSeenOnboarding = false
         storedUserName = ""
         userPrompt = ""
         avatarWasSelected = false
 
-        // Clear runtime state
         taskList.removeAll()
         tasks.removeAll()
-        tap = false
+
+        //reset navigation + popover too
+        showTasksScreen = false
+        showLoadingPopover = false
         isLoading = false
     }
 
@@ -122,17 +146,14 @@ struct ContentView: View {
         tasks.removeAll()
     }
 
+    //Generation
     @MainActor
     func generate5Tasks() async {
-        isLoading = true
-
         clearAllRecommendations()
-        tap = false
 
         var newTaskList: [Modle] = []
         var newTasks: [String] = []
 
-        
         let profileText = userPrompt.isEmpty
         ? """
         The user has a creativity block and wants small, playful, real-world activities to get unstuck.
@@ -174,7 +195,6 @@ struct ContentView: View {
 
         taskList = newTaskList
         tasks = newTasks
-        isLoading = false
     }
 }
 

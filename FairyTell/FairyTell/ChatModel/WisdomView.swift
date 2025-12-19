@@ -17,28 +17,30 @@ struct WisdomView: View {
             }
             
             ScrollView(.vertical) {
-                Text("Tasklist")
-                    .font(.largeTitle)
-                Text(viewModel.output)
-                    .padding(20)
-                    .background(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(.black, lineWidth: 2)
-                    )
-                    .foregroundStyle(Color.black)
-                
-                
+                VStack(alignment: .center){
+                    Text("Your answer")
+                        .font(.largeTitle)
+                    Text(viewModel.output)
+                        .padding(20)
+                        .background(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(.black, lineWidth: 2)
+                        )
+                        .foregroundStyle(Color.black)
+                    
+                    
+                }
             }
             
-//            NavigationLink("View Saved Chats") {
-//                ChatHistoryView(viewModel: viewModel)
-//            }
-//            .buttonStyle(.bordered)
-//            .padding()
+            //            NavigationLink("View Saved Chats") {
+            //                ChatHistoryView(viewModel: viewModel)
+            //            }
+            //            .buttonStyle(.bordered)
+            //            .padding()
         }
     }
 }
 
 //#Preview {
-//    WisdomView(output: "This is where the fairy’s answer will show up ✨")
+//    WisdomView(viewModel: ChatModle)
 //}
